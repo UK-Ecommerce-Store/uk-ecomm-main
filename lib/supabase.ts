@@ -15,3 +15,7 @@ export function supabaseAdmin() {
 export function productImageBucket() {
   return process.env.SUPABASE_STORAGE_BUCKET || "product-images";
 }
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
+export const supabase = createClient(supabaseUrl, supabaseKey);
